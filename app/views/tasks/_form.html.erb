@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="assets/styleshhets/lists.scss" />
+</head>
+
+<body>
+  <%= form_with model: [ @list, @list.tasks.build ] do |form| %>
+    <p>
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+    </p>
+    <p>
+      <%= form.label :note %><br>
+      <%= form.text_area :note %>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+</body>
+</html>

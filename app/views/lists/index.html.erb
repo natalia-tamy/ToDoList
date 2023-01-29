@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="assets/styleshhets/lists.scss" />
+</head>
+
+<body>
+  <main class="header">
+    <h1 class="title">WELCOME!</h1>
+    <h2 class="subtitle">To Do List</h2>
+    <p class="intro"> Here you can create to-do lists that help you organize your daily life :) </p>
+  </main>
+  <section class="first_part">
+    <div class="topics">
+    <h1>New</h1> 
+    <ul>
+      <li>
+        <h4 class="action">Click here to create a list</h4>
+          <button>
+            <%= link_to "New List", new_list_path %>
+          </button>
+      </li>
+    </ul>
+    </div>
+  </section>
+  <section class="second_part">
+    <div class="topics">
+    <h1>Lists</h1> 
+    <ul>
+      <li>
+        <h4 class="action">Check your lists here</h4>
+        <% @lists.each do |list| %>
+          <button>
+            <%= link_to list.name, list %>
+          </button>
+        <% end %>
+      </li>
+    </ul>
+    </div>
+  </section>
+</body>
+</html>

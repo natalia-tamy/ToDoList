@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="assets/styleshhets/lists.scss" />
+</head>
+<body>
+  <main class="header">
+    <h1 class="title">New List</h1>
+    <h2 class="subtitle">
+      <%= @list.name %>
+    </h2>
+  </main>
+  <section id="first_part">
+    <div class="topics">
+    <h1>New</h1>
+    <ul>
+      <h4 class="action">Fill in the fields below</h4>
+        <h4>
+          <%= render "form", list: @list %>
+        </h4>
+    </ul>
+    </div>
+  </section>
+</body>
+</html>

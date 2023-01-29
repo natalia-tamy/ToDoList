@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="assets/styleshhets/lists.scss" />
+</head>
+<body>
+  <main class="header">
+    <h1 class="title">Update List</h1>
+    <h2 class="subtitle">
+      <%= @list.name %>
+    </h2>
+  </main>
+  <section id="first_part">
+    <div class="topics">
+    <h1>Update</h1>
+    <ul>
+      <li>
+        <h4 class="action">What do you want to update?</h4>
+          <h4>
+            <%= render "form", list: @list %>
+          </h4>
+      </li>
+    </ul>
+    </div>
+  </section>
+</body>
+</html>

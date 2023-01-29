@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="assets/styleshhets/lists.scss" />
+</head>
+<body>
+  <main class="header">
+    <h1 class="title">
+      <%= @list.name %>
+    </h1>
+    <h2 class="subtitle">
+      <%= @list.description %>
+    </h2>
+  </main>
+  <section class="first_part">
+    <div class="topics">
+    <h1>Tasks</h1> 
+    <ul>
+      <li>
+        <h4 class="action">Check your tasks</h4>
+          <h4>
+            <%= render @list.tasks %>
+          </h4>
+      </li>
+    </ul>
+    </div>  
+  </section>
+  <section class="second_part">
+    <div class="topics">
+    <h1>New task</h1>
+    <ul>
+      <li>
+        <h4 class="action">Click here to create a task</h4>
+        <h4>
+          <%= render 'tasks/form' %>
+        </h4>
+      </li>
+    </ul>
+    </div>
+  </section>
+  <section class="footer">
+    <button>
+      <%= link_to "Edit List", edit_list_path(@list) %>
+    </button> 
+    <button>
+      <%= link_to "Destroy List", list_path(@list), method: :delete, data: { confirm: "Are you sure?" } %>
+    </button>
+  </section>
+</body>
+</html>

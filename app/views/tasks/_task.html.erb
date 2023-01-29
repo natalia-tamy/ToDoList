@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="assets/styleshhets/lists.scss" />
+</head>
+<body>
+  <div class="tasks">
+  <h4>To-do:</h4>
+    <h4>
+      <%= task.title %><br>
+    </h4>
+  </div>
+  <div>
+    <h4>
+      <%= task.note %>
+    </h4>
+  </div>
+  <div class="tasks">
+  <h4>Completed</h4>
+    <h4>
+      <%= form_with model: [ @list, @list.tasks.build ] do |form| %>
+        <%= form.date_field :completed %>
+      <% end %>
+    </h4>
+  </div>
+  <button>
+    <%= link_to "Destroy Task", [task.list, task], method: :delete, data: { confirm: "Are you sure?" } %>
+  </button>
+</body>
+</html>
