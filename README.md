@@ -4,9 +4,9 @@
 * This is a simple Ruby on Rails to-do list application, where you can create different lists to organize your tasks.
 
 # Versions
-Ruby: 2.7.7
-SQLite3: 3.31.1
-Node: 16.19.0
+ * Ruby: 2.7.7
+ * SQLite3: 3.31.1
+ * Node: 16.19.0
 # Install
 After downloading/cloning this repository, you can run the following command to install:
 
